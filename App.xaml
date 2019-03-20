@@ -1,0 +1,9 @@
+﻿<Application x:Class="SerilogDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SerilogDemo"
+             StartupUri="Examples/SL03VehicleInfoToRollingTextFile.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

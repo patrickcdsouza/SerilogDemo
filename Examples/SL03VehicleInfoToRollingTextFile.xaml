@@ -1,0 +1,28 @@
+﻿<Window x:Class="SerilogDemo.Examples.SL03VehicleInfoToRollingTextFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerilogDemo"
+        mc:Ignorable="d"
+        Title="SL03 - Vehicle Info To Rolling Text File" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock FontSize="40" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Model</TextBlock>
+        <TextBox Name="VehicleModel" FontSize="40" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBlock FontSize="40" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Year</TextBlock>
+        <TextBox Name="VehicleYear" FontSize="40" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <Button FontSize="40" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Padding="0 20" Click="AddButtonClicked">Add Car</Button>
+
+
+    </Grid>
+</Window>
