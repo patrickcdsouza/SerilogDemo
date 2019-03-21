@@ -40,14 +40,35 @@
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>packages\Serilog.2.8.0\lib\net46\Serilog.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog.Enrichers.AssemblyName, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Enrichers.AssemblyName.1.0.8\lib\net461\Serilog.Enrichers.AssemblyName.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Enrichers.Memory, Version=1.0.4.0, Culture=neutral, PublicKeyToken=b7bed4405496f503, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Enrichers.Memory.1.0.4\lib\net45\Serilog.Enrichers.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Enrichers.Thread, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Enrichers.Thread.3.0.0\lib\net45\Serilog.Enrichers.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Exceptions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=fc5550082a9c642c, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Exceptions.5.0.0\lib\net46\Serilog.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Formatting.Compact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Formatting.Compact.1.0.0\lib\net45\Serilog.Formatting.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.ColoredConsole, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.ColoredConsole.3.0.1\lib\net45\Serilog.Sinks.ColoredConsole.dll</HintPath>
+    </Reference>
     <Reference Include="Serilog.Sinks.Console, Version=3.1.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>packages\Serilog.Sinks.Console.3.1.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>packages\Serilog.Sinks.File.3.2.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+      <HintPath>packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>packages\Serilog.Sinks.RollingFile.3.3.0\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
+    </Reference>
+    <Reference Include="SerilogMetrics, Version=2.1.0.0, Culture=neutral, PublicKeyToken=d4b150f150627b06, processorArchitecture=MSIL">
+      <HintPath>packages\SerilogMetrics.2.1.0\lib\net46\SerilogMetrics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -69,6 +90,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Examples\SL08VehicleInfoUsingEnrichers.xaml.cs">
+      <DependentUpon>SL08VehicleInfoUsingEnrichers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SL06VehicleInfoToJsonLogFiles.xaml.cs">
+      <DependentUpon>SL06VehicleInfoToJsonLogFiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SL07VehicleInfoTimingMetrics.xaml.cs">
+      <DependentUpon>SL07VehicleInfoTimingMetrics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SL05VehicleInfoWithDestructuredObjects.xaml.cs">
+      <DependentUpon>SL05VehicleInfoWithDestructuredObjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Types\VehicleWithColor.cs" />
+    <Compile Include="Types\VehicleColor.cs" />
+    <Compile Include="Types\Vehicle.cs" />
+    <Compile Include="Types\VehicleWithToStringOveride.cs" />
+    <Page Include="Examples\SL08VehicleInfoUsingEnrichers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Examples\SL06VehicleInfoToJsonLogFiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Examples\SL07VehicleInfoTimingMetrics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Examples\SL05VehicleInfoWithDestructuredObjects.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Examples\SL04VehicleInfoWithCollectionsAndObjects.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Examples\SL03VehicleInfoToRollingTextFile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +141,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Examples\SL04VehicleInfoWithCollectionsAndObjects.xaml.cs">
+      <DependentUpon>SL04VehicleInfoWithCollectionsAndObjects.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\SL03VehicleInfoToRollingTextFile.xaml.cs">
       <DependentUpon>SL03VehicleInfoToRollingTextFile.xaml</DependentUpon>

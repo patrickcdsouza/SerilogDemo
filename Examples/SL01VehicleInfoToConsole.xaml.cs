@@ -27,7 +27,7 @@
         private void AddButtonClicked(object sender, RoutedEventArgs e)
         {
             string model = this.VehicleModel.Text;
-            string year = this.VehicleYear.Text;
+            int year = Convert.ToInt32(this.VehicleYear.Text);
             Log.Information("Added vehicle with Model {VehicleModel}, Year {VehicleYear} on {AddedDate}", model, year, DateTime.Now);
         }
     }
